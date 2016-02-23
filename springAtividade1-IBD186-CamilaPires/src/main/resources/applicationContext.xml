@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+	
+	<bean id="calculo1"
+		class="br.gov.sp.fatec.Calculo">
+		<property name="figuraGeometrica" ref="triangulo"></property>	
+	</bean>
+	<bean id="triangulo"
+		class="br.gov.sp.fatec.Triangulo">
+		<property name="nome" value="triangulo"/>
+		<property name="base" value="2.0"/>
+		<property name="altura" value="5.0"/>
+	</bean>
+	
+	<bean id="calculo2"
+		class="br.gov.sp.fatec.Calculo">
+		<property name="figuraGeometrica" ref="quadrado"></property>	
+	</bean>
+	<bean id="quadrado"
+		class="br.gov.sp.fatec.Quadrado">
+		<property name="nome" value="quadrado"/>
+		<property name="lado" value="3.0"/>
+	</bean>
+	
+
+</beans>
